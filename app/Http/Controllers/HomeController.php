@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Http\Controllers;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use App\Models\Project;
 
-class HomeController extends AbstractController
+class HomeController extends Controller
 {
-    #[Route('/home')]
-    public function index(): Response
+    public function index()
     {
-        return $this->render('home/index.html.twig');
+        $projects = Project::orderBy('created_at', 'desc')->get();
+        $lang = session('lang', 'en');
+
+        return view('pages.home' . ($lang === 'pl' ? '.pl' : ''), compact('projects'));
     }
 }

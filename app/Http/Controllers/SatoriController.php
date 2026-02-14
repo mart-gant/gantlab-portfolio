@@ -11,8 +11,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class SatoriController extends AbstractController
 {
     #[Route('/satori')]
-    public function index(): Response
+    public function index()
     {
-        return $this->render('satori/index.html.twig');
+        return view('pages.satori');
     }
 }

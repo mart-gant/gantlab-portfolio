@@ -1,0 +1,31 @@
+<footer class="bg-gray-900 text-gray-300 mt-20">
+    <div class="container mx-auto px-4 lg:px-8 py-12">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Marcin Gantkowski</h3>
+                <p class="text-gray-400">Remote PHP Backend Developer. I build and maintain stable backend systems.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-semibold mb-4">Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-blue-400 transition">Portfolio</a></li>
+                    <li><a href="/#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                    <li><a href="/#contact" class="hover:text-blue-400 transition">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li><a href="https://github.com/mart-gant" target="_blank" class="hover:text-blue-400 transition">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/marcingant" target="_blank" class="hover:text-blue-400 transition">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+            <p>© {{ date('Y') }} Marcin Gantkowski. Remote Backend Developer • PHP • Laravel • MySQL</p>
+        </div>
+    </div>
+</footer>

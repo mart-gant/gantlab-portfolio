@@ -6,9 +6,15 @@
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
-                <a href="/" class="text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
-                <a href="/#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projects</a>
-                <a href="/#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+                @if(session('lang') === 'pl')
+                    <a href="/?lang=pl" class="text-gray-700 hover:text-blue-600 transition font-medium">Strona Główna</a>
+                    <a href="/?lang=pl#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projekty</a>
+                    <a href="/?lang=pl#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Kontakt</a>
+                @else
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
+                    <a href="/#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projects</a>
+                    <a href="/#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+                @endif
                 
                 <!-- Language Toggle -->
                 <div class="flex items-center gap-2 ml-4 pl-4 border-l border-gray-200">

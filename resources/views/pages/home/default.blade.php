@@ -1,7 +1,7 @@
-﻿@extends('layout.app')
+@extends('layout.app')
 
-@section('title', 'Remote PHP Backend Developer â€“ Marcin Gantkowski')
-@section('description', 'Remote PHP Backend Developer. I build and maintain stable backend systems, REST APIs and integrations.')
+@section('title', 'Remote Backend Engineer - Marcin Gantkowski')
+@section('description', 'Remote Backend Engineer focused on reliable backend systems, clean architecture, and long-term maintainability.')
 
 @section('content')
     <!-- Hero Section -->
@@ -9,123 +9,143 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
-                    Remote <span class="text-blue-600">PHP Backend</span> Developer
+                    Remote Backend Engineer
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                    I build and maintain stable backend systems, REST APIs and integrations.<br>
-                    Focused on reliability, clean architecture and long-term maintainability.
+                <p class="text-xl md:text-2xl font-semibold text-blue-700 mb-4">
+                    C# / .NET � Kotlin � Structured Systems
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                    I design and build strongly-typed backend systems focused on reliability, clean architecture and long-term maintainability.<br>
+                    Experienced in REST APIs, modular design and scalable backend solutions.
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center">
                     <a href="#projects" class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold shadow-lg hover:shadow-xl">
                         View Backend Projects
                     </a>
                     <a href="#contact" class="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-50 transition font-semibold shadow-lg border border-gray-300">
-                        Contact (Remote Work)
+                        Contact
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Technologies Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-12">Technologies</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                        <div class="text-4xl mb-3">ďż˝</div>
-                        <h3 class="font-semibold">PHP</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                        <h3 class="text-lg font-semibold mb-4">Backend</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>C# / .NET</li>
+                            <li>Kotlin (JVM)</li>
+                            <li>PHP 8</li>
+                        </ul>
                     </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                        <div class="text-4xl mb-3">đź”´</div>
-                        <h3 class="font-semibold">Laravel</h3>
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                        <h3 class="text-lg font-semibold mb-4">Architecture &amp; Patterns</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>Clean Architecture</li>
+                            <li>REST API Design</li>
+                            <li>Dependency Injection</li>
+                            <li>Layered Architecture</li>
+                            <li>Async Programming</li>
+                        </ul>
                     </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                        <div class="text-4xl mb-3">đź—„ď¸Ź</div>
-                        <h3 class="font-semibold">MySQL</h3>
-                    </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                        <div class="text-4xl mb-3">đź”Ś</div>
-                        <h3 class="font-semibold">REST API</h3>
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                        <h3 class="text-lg font-semibold mb-4">Database</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>MySQL</li>
+                            <li>Entity Framework</li>
+                            <li>JPA / Hibernate</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Featured Projects Section -->
     <section id="projects" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-                    <p class="text-xl text-gray-600">Selected projects showcasing backend development</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                    <p class="text-xl text-gray-600">Selected backend projects focused on architecture and maintainability</p>
                 </div>
 
-                @if($projects->isEmpty())
-                    <div class="text-center py-12">
-                        <p class="text-gray-500 text-lg">No projects to display</p>
-                    </div>
-                @else
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        @foreach ($projects as $project)
-                            <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                                <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative">
-                                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition"></div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ $project->title }}</h3>
-                                    <p class="text-gray-600 mb-4 line-clamp-3">{{ $project->description }}</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Satori - Backend System</h3>
+                        <p class="text-gray-600 mb-4">Backend system designed with layered architecture and database integration.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                            <li>Modular backend structure</li>
+                            <li>REST API design</li>
+                            <li>Authentication and data management</li>
+                            <li>Focus on maintainability and clarity</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-blue-700">Tech: PHP 8 / MySQL</p>
+                    </article>
 
-                                    @if ($project->type)
-                                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
-                                            {{ $project->type }}
-                                        </span>
-                                    @endif
+                    <article class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">SimpleApi - .NET REST API</h3>
+                        <p class="text-gray-600 mb-4">Clean and structured backend API built using .NET.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                            <li>Layered architecture</li>
+                            <li>Dependency injection</li>
+                            <li>Async endpoints</li>
+                            <li>Swagger documentation</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-blue-700">Tech: C# / .NET</p>
+                    </article>
 
-                                    @if ($project->url)
-                                        <a href="{{ $project->url }}" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group/link">
-                                            View project
-                                            <svg class="w-4 h-4 group-hover/link:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                            </svg>
-                                        </a>
-                                    @endif
-                                </div>
-                            </article>
-                        @endforeach
-                    </div>
+                    <article class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Kotlin Backend / JVM Project</h3>
+                        <p class="text-gray-600 mb-4">Backend-oriented Kotlin project focused on structured code and strong typing.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                            <li>Clear separation of concerns</li>
+                            <li>Strongly-typed domain models</li>
+                            <li>Maintainable modular structure</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-blue-700">Tech: Kotlin / JVM</p>
+                    </article>
 
-                    {{-- GitHub repositories section --}}
-                    @if(!empty($githubRepos) && count($githubRepos))
-                        <div class="mt-12">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6">GitHub Repositories</h3>
-                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                @foreach($githubRepos as $repo)
-                                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                                        <div class="h-32 bg-gray-100 flex items-center justify-center text-4xl text-gray-500">
-                                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.387.6.11.793-.258.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="p-6">
-                                            <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ $repo['name'] }}</h3>
-                                            <p class="text-gray-600 mb-4 line-clamp-3">{{ $repo['description'] ?? 'No description' }}</p>
-                                            <a href="{{ $repo['html_url'] }}" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group/link">
-                                                View repo
-                                                <svg class="w-4 h-4 group-hover/link:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </article>
-                                @endforeach
-                            </div>
-                        </div>
-                    @endif
-                    </div>
-                @endif
+                    <article class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Mobile Companion App</h3>
+                        <p class="text-gray-600 mb-4">Supporting mobile application integrating with backend APIs.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                            <li>API integration</li>
+                            <li>Structured state management</li>
+                            <li>Clean UI logic separation</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-blue-700">Tech: Flutter / Dart</p>
+                    </article>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://github.com/mart-gant" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-semibold shadow-lg hover:shadow-xl">
+                        View more on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">How I Work</h2>
+                </div>
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li>I focus on structured backend tasks and well-defined technical scope.</li>
+                    <li>I value asynchronous communication and clear requirements.</li>
+                    <li>I prioritize maintainable architecture over quick, short-term fixes.</li>
+                    <li>I work independently or as part of small backend-focused teams.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -135,57 +155,21 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Remote Backend Work</h2>
-                    <p class="text-xl text-gray-600">What I can do for you</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Backend Services</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <!-- Service 1 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">đź› ď¸Ź</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Backend Maintenance</h3>
-                        <p class="text-gray-600">Bug fixing, code optimization and technical support for existing systems.</p>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">đź”Ś</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">REST API Development</h3>
-                        <p class="text-gray-600">Building modern APIs and integrating with external services.</p>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">â™»ď¸Ź</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Refactoring</h3>
-                        <p class="text-gray-600">Modernization and refactoring of existing PHP/Laravel systems.</p>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">đź—„ď¸Ź</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Database Design</h3>
-                        <p class="text-gray-600">Design, optimization and management of MySQL databases.</p>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">đźš€</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Architecture</h3>
-                        <p class="text-gray-600">Designing clean and scalable backend application architectures.</p>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-500 transition-all group">
-                        <div class="text-4xl mb-4">đź“‹</div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Consulting</h3>
-                        <p class="text-gray-600">Technical support, code review and consulting on architectural solutions.</p>
-                    </div>
+                <div class="bg-white border border-gray-200 p-8 rounded-lg">
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li>REST API development</li>
+                        <li>Backend system design</li>
+                        <li>Code refactoring and architecture improvements</li>
+                        <li>Database design and optimization</li>
+                        <li>Backend maintenance and stabilization</li>
+                    </ul>
                 </div>
 
-                <div class="bg-blue-50 border border-blue-200 p-8 rounded-lg text-center">
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Available for remote work</span> on B2B, employment contract, or freelance basis.</p>
-                    <p class="text-sm text-gray-600">I can join your team or work independently on projects.</p>
+                <div class="bg-blue-50 border border-blue-200 p-8 rounded-lg text-center mt-8">
+                    <p class="text-gray-700"><span class="font-semibold">Available for remote B2B contracts or freelance projects.</span></p>
                 </div>
             </div>
         </div>
@@ -221,10 +205,10 @@
 
                     <div>
                         <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             id="name"
-                            name="name" 
+                            name="name"
                             value="{{ old('name') }}"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                             placeholder="Your Name"
@@ -234,10 +218,10 @@
 
                     <div>
                         <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                        <input 
-                            type="email" 
+                        <input
+                            type="email"
                             id="email"
-                            name="email" 
+                            name="email"
                             value="{{ old('email') }}"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                             placeholder="jan@example.com"
@@ -247,9 +231,9 @@
 
                     <div>
                         <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                        <textarea 
+                        <textarea
                             id="message"
-                            name="message" 
+                            name="message"
                             rows="6"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
                             placeholder="Describe your project..."
@@ -257,7 +241,7 @@
                         >{{ old('message') }}</textarea>
                     </div>
 
-                    <button 
+                    <button
                         type="submit"
                         class="w-full px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold shadow-lg hover:shadow-xl"
                     >

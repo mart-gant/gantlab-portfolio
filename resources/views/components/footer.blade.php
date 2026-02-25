@@ -4,12 +4,12 @@
             <div>
                 <h3 class="text-white font-bold text-lg mb-4">Marcin Gantkowski</h3>
                 @if(session('lang') === 'pl')
-                    <p class="text-gray-400">Zdalny Deweloper Backend PHP. Buduję i utrzymuję stabilne systemy backendowe.</p>
+                    <p class="text-gray-400">Inzynier backendu pracujacy zdalnie. Projektuje i rozwijam niezawodne systemy backendowe.</p>
                 @else
-                    <p class="text-gray-400">Remote PHP Backend Developer. I build and maintain stable backend systems.</p>
+                    <p class="text-gray-400">Remote Backend Engineer. I design and build reliable backend systems.</p>
                 @endif
             </div>
-            
+
             <div>
                 <h4 class="text-white font-semibold mb-4">
                     @if(session('lang') === 'pl')
@@ -30,7 +30,7 @@
                     @endif
                 </ul>
             </div>
-            
+
             <div>
                 <h4 class="text-white font-semibold mb-4">
                     @if(session('lang') === 'pl')
@@ -45,13 +45,9 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
-            @if(session('lang') === 'pl')
-                <p>© {{ date('Y') }} Marcin Gantkowski. Zdalny Deweloper Backend • PHP • Laravel • MySQL</p>
-            @else
-                <p>© {{ date('Y') }} Marcin Gantkowski. Remote Backend Developer • PHP • Laravel • MySQL</p>
-            @endif
+            <p>&copy; {{ date('Y') }} Marcin Gantkowski. Backend Engineering � .NET � Kotlin � PHP</p>
         </div>
     </div>
 </footer>
